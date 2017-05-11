@@ -57,17 +57,32 @@ def main():
         [2,0],
         [3,2]
     ]
-
+    # first level
     target_entropy = entropy(energy_hl)
     gain_insu = gain(energy_hl, home_insu_pe)
     gain_homesize = gain(energy_hl, home_size_sml)
-    gain_temp = gain(energy_hl, temperature_hmc)
+    gain_temp = gain(energy_hl, temperature_hmc) # largest gain on target
+    gain_hot_insu = gain([2,1],[[2,1],[.5, 1]])
 
+    print('### Level One: Split temperature')
     print('           Target entropy: {:.3F}'.format(target_entropy))
     print('Home insulation info gain: {:.3F}'.format(gain_insu))
     print('      Home size info gain: {:.3F}'.format(gain_homesize))
     print('    Temperature info gain: {:.3F}'.format(gain_temp))
 
+    # second level
+    gain_hot_insu = gain([1,2],[[0,1],[1,1]])
+    gain_hot_size = gain([1,2],[[0,1],[0,1],[1,0]]) # largest gain on hot
+
+    gain_cool_insu = gain([3,2],[[1,2],[2,0]])
+    gain_cool_size = gain([3,2],[[1,0],[2,1],[0,1]])
+
+    print('\n','### Level Two: Split hot/cool on insulation or size')
+    print('Information gain for:')
+    print('    Split Hot on insulation: {:.3F}'.format(gain_hot_insu))
+    print('     Split Hot on home size: {:.3F}'.format(gain_hot_size))
+    print('    Split Hot on insulation: {:.3F}'.format(gain_cool_insu))
+    print('     Split Hot on home size: {:.3F}'.format(gain_cool_size))
 
 if __name__ == '__main__':
     main()
