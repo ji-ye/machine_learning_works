@@ -1,0 +1,35 @@
+comments:
+
+read data:
+5/5
+
+explore:
+10/10
+
+preprocess:
+- you cannot fill all missing values by mean. For categorical/ discrete variables you should do something else
+3/6
+
+generating features:
+- you can consider the number of dependents or any discrete variable as categorical, also after discretizing a continuous variable it can be considered as categorical
+6/6
+
+classifier:
+3/3
+
+evaluation:
+3/3
+
+style:
+- you can group your functions into separate files depending on their purpose. Then you can organize your code into a few steps. For instance you can have a main function in your code which only calls the following functions:
+read_data(input_file)
+explore_data( possible columns, options)
+pre_process(columns, tasks)
+make_features(columns, tasks)
+fit_classifier(…)
+evaluate(….)
+
+5/7
+
+
+total: 35/40

@@ -1,0 +1,40 @@
+Classifiers
+14 / 14
+
+
+Experiments
+5 / 5
+
+
+Validation
+14 / 14
+So I know everyone is doing the same thing but in general, you pick your
+model's parameter via cross validation(see GridSearchCV). The way your code is set up, you're
+just evaluating a different model on the test set for each loop. So the
+best model you picked ends up being overfitted to that test set.
+For tree based classifiers, you shouldnt cv over n_estimators since more is always better.
+For KNN, SVM, you should also try different distance functions/kernels.
+
+
+Evaluation
+8 / 12
+You should unpack the precision/recall/f1 scores in the table instead
+of inserting them as a 3-tuple. This makes it super hard to read anything
+in the results_df. Also, it would have been good for the table to
+have a single column for the overall f1, precision, and recall scores
+since those are more important than p/r/f1 at 5/10/20/etc.
+Also, please dont just plot 50+ precision/recall plots without
+giving some analysis/explanation of what we're looking at. No one wants
+to look at all these plots one after the other.
+
+
+Report/Writeup
+15 / 15
+Results are clean, easy to interpret. Why do you think it is that SVM performs
+so much worse than the others? Do you think this could be fixed with
+a different set of features or through some transformation of the features?
+
+
+Total: 56 / 60
+Exploration: I'd reccommend against boxplots in most cases. Since they're kind
+of hard to read. Violin plots are usually better.

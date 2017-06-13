@@ -1,0 +1,25 @@
+Problem 1
+
+lol@"Stay out of West Town"
+Though, more sanitiation requests does not necessarily mean its a dirtier/cleaner
+area. Could be that a neighborhood has low tolerance for crap or something.
+You should make better use of plots. The summary statistics/tables are okay, but
+having plots as well would be more helpful for understanding the dataset.
+20/20
+
+Problem 2
+The exposition here(both in the writeup and the code) is very underwhelming.
+Surely there are more interesting things to comment on based on these added
+variables right?
+c) -3 no attempt at time series analysis of 311 requests
+
+Problem 3
+-5 for no code showing how you got these numbers
+10/15
+
+Style:
+-1 for the mess in problem1.py
+Might as well have this python file instead be an ipython notebook since it looks like
+thats the way you've been using it.
+
+Total: 51/60
