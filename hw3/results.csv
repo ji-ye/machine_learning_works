@@ -1,9 +1,0 @@
-model_type,clf,accuracy,time,auc-roc,"p, r, f1_at_5","p, r, f1_at_10","p, r, f1_at_20"
-LR,"LogisticRegression(C=0.01, class_weight=None, dual=False, fit_intercept=True,
-          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=-1,
-          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
-          verbose=0, warm_start=False)",0.9324,0.3943619728088379,0.6545255718400291,"(0.13973333333333332, 0.10286611700039262, 0.11849841700587971)","(0.12853333333333333, 0.18924224577934826, 0.15308877243131647)","(0.11493333333333333, 0.33843737730663526, 0.17159351050064697)"
-SVM,"LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
-     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
-     multi_class='ovr', penalty='l2', random_state=0, tol=0.0001,
-     verbose=0)",0.9307466666666667,22.457377195358276,0.6338453136873206,"(0.15093333333333334, 0.1111111111111111, 0.12799638172772501)","(0.13653333333333334, 0.20102080879466039, 0.16261711926314118)","(0.12453333333333333, 0.36670592854338435, 0.18592614710858962)"
